@@ -2,8 +2,8 @@ package br.com.objective.animal.main;
 
 import javax.swing.JOptionPane;
 
-import br.com.objective.animal.service.Processamento;
-import br.com.objective.animal.tipo.Tipo.ambiente;
+import br.com.objective.animal.service.Proccess;
+import br.com.objective.animal.tipo.Type.environment;
 
 /**
  * 
@@ -25,30 +25,30 @@ public class AnimalMain {
 	 */
 	public static void main(String[] args) {
 		
-		Processamento p = new Processamento();
+		Proccess p = new Proccess();
 		Object[] options = {"OK"};
 		while(JOptionPane.OK_OPTION == 
 				JOptionPane.showOptionDialog(null,
-						"Pense em um Animal", "Animais",
+						"Think in a Animal", "Animals",
 		                   JOptionPane.PLAIN_MESSAGE,
 		                   JOptionPane.QUESTION_MESSAGE,
 		                   null,
 		                   options,
 		                   options[0])){
 			//água
-			if(JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, "O animal que você pensou vive na " + ambiente.AGUA.toString(), "Confirm", JOptionPane.YES_NO_OPTION)){
+			if(JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, "The animal that you thoght live in " + environment.WATER.toString(), "Confirm", JOptionPane.YES_NO_OPTION)){
 				//Verifica se há categorias para questionar
-				if(p.getRaizAgua() != null){
-					p.verificaCaracteristicas(ambiente.AGUA.toString());
+				if(p.getRootWater() != null){
+					p.checkCharacteristic(environment.WATER.toString());
 				} else { //caso não haja caracteristica, pergunta o primeiro animal.
-					p.verificaPrimeiroAnimal(ambiente.AGUA.toString());
+					p.checkFirstAnimal(environment.WATER.toString());
 				}
 			} else { //terra
 				//Verifica se há categorias para questionar
-				if(p.getRaizTerra() != null){
-					p.verificaCaracteristicas(ambiente.TERRA.toString());
+				if(p.getRootLand() != null){
+					p.checkCharacteristic(environment.LAND.toString());
 				} else { //caso não haja caracteristica, pergunta o primeiro animal.
-					p.verificaPrimeiroAnimal(ambiente.TERRA.toString());
+					p.checkFirstAnimal(environment.LAND.toString());
 				}
 			}
 		}

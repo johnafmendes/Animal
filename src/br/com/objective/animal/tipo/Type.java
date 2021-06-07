@@ -8,6 +8,6 @@ package br.com.objective.animal.tipo;
  * @version 1.0
  *
  */
-public class Tipo {	
-	public enum ambiente {AGUA, TERRA};	
+public class Type {	
+	public enum environment {WATER, LAND};	
 }

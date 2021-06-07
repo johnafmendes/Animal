@@ -10,14 +10,14 @@ package br.com.objective.animal.model.entidade;
  */
 public class Animal {
 
-	private static final String TUBARAO = "Tubarão";
-	private static final String MACACO = "Macaco";
+	private static final String SHARK = "Shark";
+	private static final String MONKEY = "Monkey";
 	
-	public String getTUBARAO() {
-		return TUBARAO;
+	public String getSHARK() {
+		return SHARK;
 	}
-	public String getMACACO() {
-		return MACACO;
+	public String getMONKEY() {
+		return MONKEY;
 	}
 		
 }
